@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossoming Dreams</title>
+    <style>
+        .background-style {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: radial-gradient(circle, rgba(167, 255, 238, 0.3) 1px, transparent 1px), 
+                              radial-gradient(circle, rgba(0, 150, 136, 0.3) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: 0 0, 25px 25px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .blossom-button {
+            background: linear-gradient(135deg, #a7ffee 0%, #009688 100%);
+            border: 2px solid white;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 25px rgba(167, 255, 238, 0.6), 0 0 50px rgba(0, 150, 136, 0.6), 0 0 75px rgba(0, 230, 118, 0.6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .blossom-button:hover {
+            box-shadow: 0 0 35px rgba(167, 255, 238, 0.8), 0 0 70px rgba(0, 150, 136, 0.8), 0 0 105px rgba(0, 230, 118, 0.8);
+        }
+
+        .blossom-button:focus {
+            outline: none;
+        }
+
+        .blossom-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 25px rgba(0, 230, 118, 0.6), 0 0 50px rgba(0, 150, 136, 0.6), 0 0 75px rgba(167, 255, 238, 0.6);
+        }
+
+        @keyframes clickAnimation {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 25px rgba(167, 255, 238, 0.6), 0 0 50px rgba(0, 150, 136, 0.6), 0 0 75px rgba(0, 230, 118, 0.6);
+            }
+            50% {
+                transform: scale(0.95);
+                box-shadow: 0 0 15px rgba(167, 255, 238, 0.4), 0 0 30px rgba(0, 150, 136, 0.4), 0 0 45px rgba(0, 230, 118, 0.4);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 25px rgba(167, 255, 238, 0.6), 0 0 50px rgba(0, 150, 136, 0.6), 0 0 75px rgba(0, 230, 118, 0.6);
+            }
+        }
+
+        .blossom-button.animated-click {
+            animation: clickAnimation 0.5s ease;
+        }
+
+        @media (max-width: 768px) {
+            .blossom-button {
+                padding: 10px 20px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body class="background-style">
+    <div class="button-container">
+        <button class="blossom-button animated-click">Begin the blossom</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.querySelector('.blossom-button');
+            setTimeout(() => {
+                button.classList.add('animated-click');
+                setTimeout(() => {
+                    button.classList.remove('animated-click');
+                }, 500);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
