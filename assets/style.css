@@ -1080,10 +1080,10 @@ body {
 /* text  */
 .background-text {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 6em;
+    font-size: 3em;
     color: rgba(226, 226, 226, 0.851);
     text-align: center;
     z-index: -1;
@@ -1095,9 +1095,11 @@ body {
 
 @media (max-width: 768px) {
     .background-text {
-        font-size: 2em;
+        font-size: 1.125em;
+        top:30%
     }
 }
+
 /* text fade out  */
 @keyframes fadeOutText {
     from {
