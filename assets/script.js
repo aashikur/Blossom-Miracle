@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
               // text.style.display = "block"; // Show the text after button is hidden
               setTimeout(() => {
                   text.style.animation = "fadeOutText 2s forwards"; // Fade out the text
-                  text.style.display = "block"; // Fade out the text
+                  // text.style.display = "block"; // Fade out the text
               }, 3000); // Time the text stays visible before starting to fade out
           }, 500);
       }, 100); // Small delay to ensure the "not-loaded" class is removed first
