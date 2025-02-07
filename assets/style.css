@@ -1075,3 +1075,31 @@ body {
         font-size: 18px;
     }
 }
+
+/* text  */
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    color: rgba(226, 226, 226, 0.851);
+    text-align: center;
+    z-index: -1;
+    display: none;
+    }
+
+@media (max-width: 768px) {
+    .background-text {
+        font-size: 2em;
+    }
+}
+/* text fade out  */
+@keyframes fadeOutText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
